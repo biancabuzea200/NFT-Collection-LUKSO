@@ -1,13 +1,11 @@
-# Sample Hardhat Project
+# Munchkins Collection
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+A cute collection of Munchkins NFTs.
 
-Try running some of the following tasks:
+## Steps
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
-```
+1. npx hardhat compile
+2. npx hardhat run scripts/deploy.ts --network lukso_testnet
+3. npx hardhat run scripts/generateMetadataJSON.ts --network lukso_testnet
+4. npx hardhat run scripts/updateTokenIdMetadata.ts --network lukso_testnet
+5. npx hardhat run scripts/minttokenId.ts --network lukso_testnet
