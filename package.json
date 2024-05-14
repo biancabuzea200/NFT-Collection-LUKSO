@@ -1,0 +1,25 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.4"
+  },
+  "dependencies": {
+    "@erc725/erc725.js": "^0.23.1",
+    "@lukso/lsp4-contracts": "^0.15.0",
+    "@lukso/lsp8-contracts": "^0.15.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.12.1"
+  },
+  "scripts": {
+    "build": "hardhat compile",
+    "deploy:testnet": "hardhat run scripts/deploy.ts --network lukso_testnet",
+    "deploy:mainnet": "hardhat run scripts/deploy.ts --network lukso_mainnet",
+    "verify": "bash scripts/verify.bash",
+    "generate-metadata": "ts-node scripts/generateMetadataJSON.ts",
+    "mint-token-id:testnet": "hardhat run scripts/mintTokenId.ts --network lukso_testnet",
+    "mint-token-id:mainnet": "hardhat run scripts/mintTokenId.ts --network lukso_mainnet",
+    "update-metadata:testnet": "hardhat run scripts/updateTokenIdMetadata.ts --network lukso_testnet",
+    "update-metadata:mainnet": "hardhat run scripts/updateTokenIdMetadata.ts --network lukso_mainnet"
+  }
+}
