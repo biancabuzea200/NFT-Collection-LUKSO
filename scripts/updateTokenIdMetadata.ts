@@ -18,7 +18,7 @@ const main = async () => {
   const signer = await ethers.getSigner(COLLECTION_OWNER);
 
   const url =
-    "ipfs://QmV4eQTCVoNjj9jTRVzN7KDWuFAQ19yKiiWS1VWAAPPRLG/metadata.json";
+    "ipfs://QmSE6Z1FQhfWD5nmbL3ZmtS4cSJKEBy1ChryY1WDUtVBhp/metadata.json";
   const json = JSON.parse(readFileSync("assets/metadata.json").toString());
 
   const encodedMetadataURI = erc725.encodeData([

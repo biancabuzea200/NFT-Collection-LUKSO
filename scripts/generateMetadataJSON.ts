@@ -7,8 +7,8 @@ const main = () => {
     return;
   }
 
-  const firstImage = readFileSync("assets/1.png").toString("hex");
-  const secondImage = readFileSync("assets/2.png").toString("hex");
+  const firstImage = readFileSync("assets/Butter.png").toString("hex");
+  const secondImage = readFileSync("assets/Sprinkle.png").toString("hex");
   const iconImage = readFileSync("assets/icon.png").toString("hex");
 
   const name = "Your collectible name";
@@ -16,7 +16,7 @@ const main = () => {
   const links = [{ title: "Twitter", url: "https://twitter.com/" }];
   const attributes = [
     { key: "Unrevealed", value: true, type: "boolean" },
-    { key: "Background", value: "Green", type: "string" },
+    { key: "Background", value: "Yellow", type: "string" },
     { key: "Age", value: 10, type: "number" },
   ];
   const images = [
@@ -24,7 +24,7 @@ const main = () => {
       {
         width: 1024,
         height: 1024,
-        url: "ipfs://QmQTtwSsSyVdGGu88TzSrXibdFqsf2nLRYVJpVaCsRvwxL/1.png",
+        url: "ipfs://QmVfYb9D6x5hNuAaMa1qmoS2LmGi9Z78B1JKKaMyedv7wv/Butter.png",
         verification: {
           method: "keccak256(bytes)",
           hash: ethers.keccak256(`0x${firstImage}`),
@@ -35,7 +35,7 @@ const main = () => {
       {
         width: 1024,
         height: 1024,
-        url: "ipfs://QmPuL2Vehgg9E4UFpJsAeVHKiHfvNXzvmYAjLP7Y6Z7B2K/2.png",
+        url: "ipfs://QmZR5P4o322gTtAxsbt2gm93e7bYqBhnjaMog4HnjYmAFt/Sprinkle.png",
         verification: {
           method: "keccak256(bytes)",
           hash: ethers.keccak256(`0x${secondImage}`),
@@ -47,7 +47,7 @@ const main = () => {
     {
       width: 1024,
       height: 1024,
-      url: "ipfs://ipfs://QmYrhk2m4YHHtwMKZgcUixzYw6VCkXGmV76HZbFCxDUpXT/icon.png",
+      url: "ipfs://QmPS3n3xe5gQsGpUnpaYWvzug44JknBZbUv6cv8yKJ7Gsi/icon.png",
       verification: {
         method: "keccak256(bytes)",
         hash: ethers.keccak256(`0x${iconImage}`),
