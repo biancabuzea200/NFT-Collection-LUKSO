@@ -1,7 +1,7 @@
 import { readFileSync } from "fs";
 import { ethers } from "hardhat";
 import { toBeHex } from "ethers";
-import { YourCollectionName__factory } from "../typechain-types";
+import { Munchkins__factory } from "../typechain-types";
 
 import { config as LoadEnv } from "dotenv";
 import { ERC725 } from "@erc725/erc725.js";
@@ -18,7 +18,7 @@ const main = async () => {
   const signer = await ethers.getSigner(COLLECTION_OWNER);
 
   const url =
-    "ipfs://QmSE6Z1FQhfWD5nmbL3ZmtS4cSJKEBy1ChryY1WDUtVBhp/metadata.json";
+    "ipfs://QmammFxavKQp86RoQB9FkXVTcyTV4zouhfCutciKc6oJux/metadata.json";
   const json = JSON.parse(readFileSync("assets/metadata.json").toString());
 
   const encodedMetadataURI = erc725.encodeData([
@@ -31,9 +31,9 @@ const main = async () => {
     },
   ]);
 
-  const collectionAddress = "0x0aFD5980A261b71399Be95EAb9Fbf94e2f63245d";
+  const collectionAddress = "0x06910205196C7393c1e37835A0b9F8EEbC7f30a1";
   const tokenId = toBeHex(1, 32);
-  const collection = YourCollectionName__factory.connect(
+  const collection = Munchkins__factory.connect(
     collectionAddress,
     signer
   );

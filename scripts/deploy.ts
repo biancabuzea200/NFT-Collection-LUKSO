@@ -1,5 +1,5 @@
 import { ethers } from "hardhat";
-import { YourCollectionName__factory } from "../typechain-types";
+import { Munchkins__factory } from "../typechain-types";
 
 import { config as LoadEnv } from "dotenv";
 LoadEnv();
@@ -10,9 +10,9 @@ const main = async () => {
   if (!PUBLIC_KEY || !COLLECTION_OWNER) return;
 
   const signer = await ethers.getSigner(PUBLIC_KEY);
-  const collection = await new YourCollectionName__factory(signer).deploy(
-    "Your collection name",
-    "Your collection ticker",
+  const collection = await new Munchkins__factory(signer).deploy(
+    "Munchkins",
+    "MNK",
     COLLECTION_OWNER
   );
 

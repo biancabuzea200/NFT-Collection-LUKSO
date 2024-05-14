@@ -2,7 +2,7 @@ import { readFileSync } from "fs";
 import { ethers } from "hardhat";
 import { toBeHex } from "ethers";
 
-import { YourCollectionName__factory } from "../typechain-types";
+import { Munchkins__factory } from "../typechain-types";
 import { config as LoadEnv } from "dotenv";
 
 LoadEnv();
@@ -14,13 +14,13 @@ const main = async () => {
 
   const signer = await ethers.getSigner(COLLECTION_OWNER);
 
-  const collectionAddress = "0x0aFD5980A261b71399Be95EAb9Fbf94e2f63245d";
-  const collection = YourCollectionName__factory.connect(
+  const collectionAddress = "0x06910205196C7393c1e37835A0b9F8EEbC7f30a1";
+  const collection = Munchkins__factory.connect(
     collectionAddress,
     signer
   );
 
-  const to = "0x201eA0Cf799181CdC6548D5C7CFE6E95DcdEe0eE";
+  const to = "0x5bBdacCe1c93175F3953D84E6f2c9e9c2be1C205";
   const tokenId = toBeHex(1, 32);
   const force = false;
   const data = "0x";

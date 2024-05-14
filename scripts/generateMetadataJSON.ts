@@ -11,8 +11,8 @@ const main = () => {
   const secondImage = readFileSync("assets/Sprinkle.png").toString("hex");
   const iconImage = readFileSync("assets/icon.png").toString("hex");
 
-  const name = "Your collectible name";
-  const description = "Description for your collectible";
+  const name = "Munchkins";
+  const description = "A cute collection of Munchkins";
   const links = [{ title: "Twitter", url: "https://twitter.com/" }];
   const attributes = [
     { key: "Unrevealed", value: true, type: "boolean" },
