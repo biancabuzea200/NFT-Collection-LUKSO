@@ -7,20 +7,26 @@ LoadEnv();
 const { PUBLIC_KEY, COLLECTION_OWNER } = process.env;
 
 const main = async () => {
-  if (!PUBLIC_KEY || !COLLECTION_OWNER) return;
 
+  if (!PUBLIC_KEY || !COLLECTION_OWNER) {
+   console.error("Missing environment variables. Please ensure PUBLIC_KEY and COLLECTION_OWNER are set in .env.");
+   return;
+   }
+ 
+  // Get signer using the public key from the environment variables
   const signer = await ethers.getSigner(PUBLIC_KEY);
+
+  // Deploy the Munchkins contract
   const collection = await new Munchkins__factory(signer).deploy(
     "Munchkins",
     "MNK",
     COLLECTION_OWNER
   );
 
-  console.log(await collection.getAddress());
+  console.log("Contract deployed to", await collection.getAddress());
 };
 
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
+
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
