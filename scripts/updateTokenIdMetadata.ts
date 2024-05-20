@@ -13,7 +13,11 @@ LoadEnv();
 const { COLLECTION_OWNER } = process.env;
 
 const main = async () => {
-  if (!COLLECTION_OWNER) return;
+ 
+  if (!COLLECTION_OWNER) {
+    console.log("COLLECTION_OWNER is not set in .env")
+    return;
+  }
 
   const signer = await ethers.getSigner(COLLECTION_OWNER);
 
