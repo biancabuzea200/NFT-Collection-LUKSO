@@ -10,11 +10,15 @@ LoadEnv();
 const { COLLECTION_OWNER } = process.env;
 
 const main = async () => {
-  if (!COLLECTION_OWNER) return;
+  if (!COLLECTION_OWNER) {
+    console.log("COLLECTION_OWNER is not set in .env");
+    return;
+  }
 
   const signer = await ethers.getSigner(COLLECTION_OWNER);
 
   const collectionAddress = "0x06910205196C7393c1e37835A0b9F8EEbC7f30a1";
+  //const collectionAddress ="0x0B9AAdd3C34DF45207c028bce69704E7FDdCB49d";
   const collection = Munchkins__factory.connect(
     collectionAddress,
     signer
