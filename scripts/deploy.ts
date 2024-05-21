@@ -18,8 +18,8 @@ const main = async () => {
 
   // Deploy the Munchkins contract
   const collection = await new Munchkins__factory(signer).deploy(
-    "Munchkins",
-    "MNK",
+    "Munchkins", // collection name
+    "MNK",       // collection symbol
     COLLECTION_OWNER
   );
 
