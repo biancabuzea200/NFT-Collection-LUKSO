@@ -2,13 +2,9 @@
 
 A cute collection of Munchkins NFTs.
 
-<div style={{textAlign: 'center', color: 'grey'}}>
-  <img
-    src={require('./assets/collection.png').default}
-    alt="Munchkins"
-    width="400"
-  />
-</div>
+<img src='./assets/collection.png'
+alt="Munchkins"
+width="400" />
 
 ## Run Locally
 
