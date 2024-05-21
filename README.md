@@ -8,7 +8,7 @@ width="400" />
 
 # Prerequisites
 
-1.  Node.js - you can install node using either [nvm](https://github.com/nvm-sh/nvm) or [fnm](https://github.com/Schniz/fnm)
+1.  Node.js - you can install Node using either [nvm](https://github.com/nvm-sh/nvm) or [fnm](https://github.com/Schniz/fnm)
 2.  [The Universal Profile Browser Extension](https://docs.lukso.tech/install-up-browser-extension)
 3.  [A Universal Profile address](https://my.universalprofile.cloud/)
 
