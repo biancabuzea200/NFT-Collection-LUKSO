@@ -1,6 +1,6 @@
 # Munchkins Collection
 
-A cute collection of Munchkins NFTs on LUKSO using LSP8.
+A cute collection of Munchkins NFTs on LUKSO using [LSP8](https://docs.lukso.tech/standards/tokens/LSP8-Identifiable-Digital-Asset/).
 
 <img src='./assets/collection.png'
 alt="Munchkins"
